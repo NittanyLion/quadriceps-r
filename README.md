@@ -28,13 +28,11 @@ package whenever a smaller rule is found.
 
 ## Installation
 
-The repository is private. With access to it, either
-
 ```r
-remotes::install_git("git@github.com:NittanyLion/quadriceps-r.git")
+install.packages("quadriceps")
 ```
 
-or clone it and run `R CMD INSTALL quadriceps-r`. The package needs base R only.
+The package needs base R only.
 
 ## Use
 
