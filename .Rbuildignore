@@ -5,3 +5,4 @@
 ^\.git$
 ^FORMAT\.md$
 ^\.github$
+^authored_by\.svg$

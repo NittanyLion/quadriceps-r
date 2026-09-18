@@ -62,6 +62,9 @@ R CMD build . && R CMD check quadriceps_*.tar.gz
 
 ## Repository
 
+`authored_by.svg` is the author's shield (the same file as in MemoryLayouts.jl); the README shows
+it after the other badges. Do not replace it with a generated shields.io badge.
+
 Quality gate, the analog of Aqua.jl: `R CMD check --as-cran` must finish without warnings (CI
 fails on any WARNING). The logo is `man/figures/logo.svg`, a copy of the one in Quadriceps.jl.
 

@@ -3,7 +3,7 @@
 # quadriceps (R)
 
 [![CI](https://github.com/NittanyLion/quadriceps-r/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/NittanyLion/quadriceps-r/actions/workflows/R-CMD-check.yml)
-[![Authored by Joris Pinkse](https://img.shields.io/badge/authored%20by-Joris%20Pinkse-blue.svg)](https://github.com/NittanyLion)
+![authored by: JP](authored_by.svg)
 
 > **Paper:** Joris Pinkse, *Positive weight Hermite and Legendre quadrature rules* — arXiv: **[ARXIV-LINK-TBA](https://arxiv.org/abs/ARXIV-LINK-TBA)** (link to be filled in on publication)
 >
