@@ -1,5 +1,7 @@
 # quadriceps (R)
 
+[![CI](https://github.com/NittanyLion/quadriceps-r/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/NittanyLion/quadriceps-r/actions/workflows/R-CMD-check.yml)
+
 > **Paper:** J. Pinkse, *Positive weight Hermite and Legendre quadrature rules* — arXiv: **[ARXIV-LINK-TBA](https://arxiv.org/abs/ARXIV-LINK-TBA)** (link to be filled in on publication)
 >
 > **Data deposit:** Zenodo — DOI: **[ZENODO-DOI-TBA](https://doi.org/ZENODO-DOI-TBA)** (link to be filled in on publication)
@@ -8,12 +10,12 @@ Positive-weight cubature rules in several dimensions, for two weights:
 
 | function | weight (default) | one-dimensional cousin |
 |---|---|---|
-| `ghpos(d, q)` | standard normal density `N(0, I_d)` on `R^d` | `statmod::gauss.quad(q, "hermite")` |
-| `lepos(d, q)` | uniform density on `[0,1]^d` | `statmod::gauss.quad(q, "legendre")` |
+| `ghpos(d, q)` | standard normal density `N(0, I_d)` on `ℝᵈ` | `statmod::gauss.quad(q, "hermite")` |
+| `lepos(d, q)` | uniform density on `[0,1]ᵈ` | `statmod::gauss.quad(q, "legendre")` |
 
-A rule of degree `p` is a set of `n` nodes `x_i` in `R^d` and weights `w_i > 0` with
+A rule of degree `p` is a set of `n` nodes `x_i` in `ℝᵈ` and weights `w_i > 0` with
 `sum_i w_i f(x_i) = integral of f(x) ω(x) dx` for every polynomial `f` of total degree `<= p`.
-The product of `q`-node one-dimensional Gauss rules does this for `p = 2q - 1` with `q^d` nodes.
+The product of `q`-node one-dimensional Gauss rules does this for `p = 2q - 1` with `qᵈ` nodes.
 The rules stored here, the smallest positive-weight rules known to the author, do it with far
 fewer; at `d = 5` the saving is more than a factor of ten. They cover `2 <= d <= 5`.
 [`RULES.md`](RULES.md) lists every rule with its node count, Möller's lower bound, measured
@@ -41,7 +43,7 @@ library(quadriceps)
 
 r <- ghpos(3, 4)                # d = 3, q = 4 (degree 7): r$nodes is 27 x 3, r$weights has length 27
 f <- function(x) x[, 1]^2 * x[, 2]^4
-sum(r$weights * f(r$nodes))     # E[Z1^2 Z2^4] = 3
+sum(r$weights * f(r$nodes))     # E[Z₁² Z₂⁴] = 3
 
 r <- lepos(2, 5)                # q = 5 (degree 9): 17 nodes on the unit square instead of 25
 sum(r$weights * r$nodes[, 1]^3 * r$nodes[, 2]^2)      # 1/4 * 1/3
@@ -53,7 +55,7 @@ Both functions return a list with components `nodes` (an `n x d` matrix, one nod
 `weights` (`n` positive weights), like `statmod::gauss.quad`. The second argument `q` has its
 one-dimensional meaning: the number of nodes of the one-dimensional Gauss rule, which is exact
 to degree `2q - 1`. `ghpos(d, q)` returns a `d`-dimensional rule of that same degree
-`p = 2q - 1`: a replacement for the `q^d`-node product grid, and for `d = 1` the `q`-node Gauss
+`p = 2q - 1`: a replacement for the `qᵈ`-node product grid, and for `d = 1` the `q`-node Gauss
 rule itself.
 
 To ask for a degree instead, name the argument `p`: `ghpos(d, p = 7)`, `lepos(d, p = 12)`. Any
@@ -63,14 +65,14 @@ both.
 
 ### `normalize`
 
-`statmod::gauss.quad(q, "hermite")` integrates against `exp(-x^2)`. The rules here are made for
+`statmod::gauss.quad(q, "hermite")` integrates against `exp(-x²)`. The rules here are made for
 the standard normal density, which is what an expectation needs, so `normalize = TRUE` is the
 default:
 
 | | `normalize = TRUE` (default) | `normalize = FALSE` (`gauss.quad`'s convention) |
 |---|---|---|
-| `ghpos` | weight `(2 pi)^(-d/2) exp(-‖x‖^2/2)`; weights sum to 1 | weight `exp(-‖x‖^2)`; weights sum to `pi^(d/2)` |
-| `lepos` | uniform density on `[0,1]^d`; weights sum to 1 | plain integral over `[-1,1]^d`; weights sum to `2^d` |
+| `ghpos` | weight `(2π)⁻ᵈᐟ² exp(-‖x‖²/2)`; weights sum to 1 | weight `exp(-‖x‖²)`; weights sum to `πᵈᐟ²` |
+| `lepos` | uniform density on `[0,1]ᵈ`; weights sum to 1 | plain integral over `[-1,1]ᵈ`; weights sum to `2ᵈ` |
 
 For `Y ~ N(mu, L L')` use the nodes `sweep(r$nodes %*% t(L), 2, mu, "+")` with the same weights;
 for a box, rescale the columns of the Le nodes.

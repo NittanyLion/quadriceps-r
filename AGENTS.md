@@ -50,7 +50,7 @@ R CMD build . && R CMD check quadriceps_*.tar.gz
   returned has degree `p = 2q - 1`, and for `d = 1` it is the `q`-node Gauss rule. The degree
   can be given instead as `p`. Exactly one of the two. Internally everything works in `p`.
 * **Normalized frame inside.** Files, cache, tensor products and `exactness_error` use
-  `N(0, I_d)` for GH and the uniform density on `[0,1]^d` for Le, weights summing to 1.
+  `N(0, I_d)` for GH and the uniform density on `[0,1]ᵈ` for Le, weights summing to 1.
   `normalize = FALSE` is applied once, at the end, in `R/api.R`.
 * **`normalize = TRUE` is the default**, unlike `statmod::gauss.quad`. This is deliberate.
 * **`pragmatic`.** `FALSE`: an error of class `quadriceps_no_rule` when no stored rule covers
@@ -61,6 +61,9 @@ R CMD build . && R CMD check quadriceps_*.tar.gz
 * Base R only: no imports. American spelling.
 
 ## Repository
+
+GitHub Actions (`.github/workflows/R-CMD-check.yml`) runs the tests on every push to `main` and on pull
+requests; the unattended data updates trigger it too. Check `gh run list` after pushing.
 
 Private, `github.com/NittanyLion/quadriceps-r`, branch `main`. No license has been chosen yet
 (`LICENSE` says so); do not choose one without the author.
