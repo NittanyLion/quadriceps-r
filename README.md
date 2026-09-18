@@ -65,7 +65,7 @@ default:
 
 | | `normalize = TRUE` (default) | `normalize = FALSE` (`gauss.quad`'s convention) |
 |---|---|---|
-| `ghpos` | weight `(2 pi)^(-d/2) exp(-|x|^2/2)`; weights sum to 1 | weight `exp(-|x|^2)`; weights sum to `pi^(d/2)` |
+| `ghpos` | weight `(2 pi)^(-d/2) exp(-‖x‖^2/2)`; weights sum to 1 | weight `exp(-‖x‖^2)`; weights sum to `pi^(d/2)` |
 | `lepos` | uniform density on `[0,1]^d`; weights sum to 1 | plain integral over `[-1,1]^d`; weights sum to `2^d` |
 
 For `Y ~ N(mu, L L')` use the nodes `sweep(r$nodes %*% t(L), 2, mu, "+")` with the same weights;
