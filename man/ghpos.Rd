@@ -44,7 +44,7 @@ a rule with the same exactness in \code{d} dimensions, degree \verb{p = 2q - 1},
 \code{q^d}-node product grid; for \code{d = 1} it is the \code{q}-node Gauss-Hermite rule itself.
 Alternatively give the degree: \code{ghpos(d, q)} is \code{ghpos(d, p = 2 * q - 1)}.
 
-With \code{r <- ghpos(d, q)}, \code{sum(r$weights * f(r$nodes))} (for a vectorized \code{f} of the rows)
+With \code{rule <- ghpos(d, q)}, \code{sum(rule$weights * f(rule$nodes))} (for a vectorized \code{f} of the rows)
 equals the integral of \code{f} against the weight for every polynomial \code{f} of total degree
 \verb{<= p}, up to rounding; \code{\link[=ruleinfo]{ruleinfo()}} gives the measured error of each stored rule.
 

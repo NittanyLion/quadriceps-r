@@ -10,7 +10,7 @@
 #' `q^d`-node product grid; for `d = 1` it is the `q`-node Gauss-Hermite rule itself.
 #' Alternatively give the degree: `ghpos(d, q)` is `ghpos(d, p = 2 * q - 1)`.
 #'
-#' With `r <- ghpos(d, q)`, `sum(r$weights * f(r$nodes))` (for a vectorized `f` of the rows)
+#' With `rule <- ghpos(d, q)`, `sum(rule$weights * f(rule$nodes))` (for a vectorized `f` of the rows)
 #' equals the integral of `f` against the weight for every polynomial `f` of total degree
 #' `<= p`, up to rounding; [ruleinfo()] gives the measured error of each stored rule.
 #'
@@ -137,7 +137,7 @@ ruleinfo <- function(family, d, q = NULL, p = NULL, pragmatic = FALSE) {
   rows <- lapply(pl$parts, function(a) {
     if (!is.null(a$info)) return(a$info)
     data.frame(family = family, d = 1L, q = a$n, p = 2L * a$n - 1L, n = a$n, moller = NA_integer_,
-               relerr = NA_real_, minweight = NA_real_, interior = NA, origin = "Gauss", file = NA_character_,
+               relerr = NA_real_, minweight = NA_real_, interior = NA, origin = "Gauss", source_id = NA_integer_,
                stringsAsFactors = FALSE)
   })
   out <- do.call(rbind, rows)

@@ -22,7 +22,8 @@ when the data were built (see \code{\link[=exactness_error]{exactness_error()}})
 \item \code{interior}: \code{TRUE} when every node lies inside the integration domain;
 \item \code{origin}: who the rule belongs to: \code{"own"}, or \code{"derived: ..."}, \code{"same-rule: ..."},
 \code{"transcribed: ..."} followed by the published source;
-\item \code{file}: file name under \verb{extdata/<family>/}.
+\item \code{source_id}: the origin as the small integer stored in \code{rules.bin} (0: own; 3: derived
+from Diallo and Worku; 10 and up: a published rule; see \code{FORMAT.md} in the repository).
 }
 }
 \description{

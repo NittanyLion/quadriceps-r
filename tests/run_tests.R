@@ -113,5 +113,12 @@ expect(near(sum(u$weights), 2^6) && near(sum(u$weights * u$nodes[, 6]^2), 2^6 / 
 expect(nnodes("gh", 60, 16, pragmatic = TRUE) > 2^53, "huge counts are reported")
 expect_error(ghpos(60, 16, pragmatic = TRUE), "huge rules are refused")
 
+# --- the data file
+dir <- if (is.null(getOption("quadriceps.datadir"))) system.file("extdata", package = "quadriceps") else getOption("quadriceps.datadir")
+expect(identical(sort(list.files(dir, recursive = TRUE)), c("index.tsv", "rules.bin")), "one binary file and its catalog, nothing else")
+n_rules <- nrow(available_rules("gh")) + nrow(available_rules("le"))
+expect(startsWith(readLines(file.path(dir, "rules.bin"), n = 1L, warn = FALSE),
+                  sprintf("QUADRICEPS1 fmt=1 endian=little cells=%d index_fields=8 float=binary64", n_rules)), "header of rules.bin")
+
 cat(sprintf("%d checks, %d failed\n", checks, length(failures)))
 if (length(failures) > 0) stop("failed:\n  ", paste(failures, collapse = "\n  "))

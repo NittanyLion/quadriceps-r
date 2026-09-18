@@ -1,5 +1,9 @@
 # quadriceps (R)
 
+> **Paper:** J. Pinkse, *Positive weight Hermite and Legendre quadrature rules* — arXiv: **[ARXIV-LINK-TBA](https://arxiv.org/abs/ARXIV-LINK-TBA)** (link to be filled in on publication)
+>
+> **Data deposit:** Zenodo — DOI: **[ZENODO-DOI-TBA](https://doi.org/ZENODO-DOI-TBA)** (link to be filled in on publication)
+
 Positive-weight cubature rules in several dimensions, for two weights:
 
 | function | weight (default) | one-dimensional cousin |
@@ -103,6 +107,10 @@ returned; the data contain no such case, and the tests check that.)
 * `exactness_error(nodes, weights, p, family)` measures how exact a rule is.
 
 Every function has a help page (`?ghpos`, `?quadriceps`).
+
+All rules are stored in one binary file, `inst/extdata/rules.bin`, with `index.tsv` next to it
+as the catalog; [`FORMAT.md`](FORMAT.md) specifies the format, which the Julia and Python
+packages share byte for byte.
 
 ## Accuracy
 
