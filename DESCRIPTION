@@ -1,0 +1,15 @@
+Package: quadriceps
+Title: Positive-Weight Cubature Rules for the Gaussian Weight and the Cube
+Version: 0.1.0
+Authors@R: person("Joris", "Pinkse", email = "pinkse@gmail.com", role = c("aut", "cre"))
+Description: Positive-weight cubature rules in several dimensions for the
+    Gaussian weight (ghpos) and the uniform weight on the cube (lepos): the
+    smallest rules known to the author for dimensions 2 to 5, with a fallback
+    to the cheapest tensor product of lower-dimensional rules elsewhere. The R
+    twin of the Julia package Quadriceps.jl.
+License: file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+URL: https://github.com/NittanyLion/quadriceps-r
