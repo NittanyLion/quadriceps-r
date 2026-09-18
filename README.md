@@ -127,9 +127,9 @@ the Golub–Welsch eigenvalue method in base R.
 
 ## Whose rules these are
 
-Most rules were computed by the author. Some are rules from the literature (copied in, or
-found again by the author's search and recognized), and some Le rules were obtained by node
-elimination started from Diallo and Worku's published rules. `ruleinfo()` and the `origin`
+<!-- BEGIN GENERATED credits -->
+<!-- END GENERATED credits -->
+`ruleinfo()` and the `origin`
 column of [`RULES.md`](RULES.md) say which is which; cite the source named there when you use
 such a rule. [`NOTICE.md`](NOTICE.md) has the details and the license notice that travels with
 the derived files.
