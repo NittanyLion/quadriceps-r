@@ -4,7 +4,7 @@ Guidance for coding agents (and people) working in this repository.
 
 ## Paper and deposit — links to fill in
 
-The rules are described in J. Pinkse, *Positive weight Hermite and Legendre quadrature rules*,
+The rules are described in Joris Pinkse, *Positive weight Hermite and Legendre quadrature rules*,
 and deposited on Zenodo. Neither is public yet, so the links are placeholders:
 
 * arXiv: **[ARXIV-LINK-TBA](https://arxiv.org/abs/ARXIV-LINK-TBA)**
@@ -61,6 +61,9 @@ R CMD build . && R CMD check quadriceps_*.tar.gz
 * Base R only: no imports. American spelling.
 
 ## Repository
+
+Quality gate, the analog of Aqua.jl: `R CMD check --as-cran` must finish without warnings (CI
+fails on any WARNING). The logo is `man/figures/logo.svg`, a copy of the one in Quadriceps.jl.
 
 GitHub Actions (`.github/workflows/R-CMD-check.yml`) runs the tests on every push to `main` and on pull
 requests; the unattended data updates trigger it too. Check `gh run list` after pushing.

@@ -24,7 +24,10 @@ jobs:
           use-public-rspm: true
       # base R only, so there are no dependencies to install
       - run: R CMD build .
-      - run: R CMD check --no-manual quadriceps_*.tar.gz
+      - run: R CMD check --no-manual --as-cran quadriceps_*.tar.gz
+      - name: Fail on warnings (the quality gate)
+        run: |
+          if grep -q 'WARNING' quadriceps.Rcheck/00check.log; then cat quadriceps.Rcheck/00check.log; exit 1; fi
       - name: Show the check log on failure
         if: failure()
         run: cat quadriceps.Rcheck/00check.log quadriceps.Rcheck/tests/*.Rout* || true
