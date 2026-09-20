@@ -142,3 +142,8 @@ the derived files.
 ```
 Rscript tests/run_tests.R       # from the package root; about 20 s
 ```
+
+## License
+
+MIT; see [`LICENSE.md`](LICENSE.md). The rules that descend from, or coincide with, published rules
+carry their sources' notices in [`NOTICE.md`](NOTICE.md).

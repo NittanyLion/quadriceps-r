@@ -7,7 +7,7 @@ Description: Positive-weight cubature rules in several dimensions for the
     smallest rules known to the author for dimensions 2 to 5, with a fallback
     to the cheapest tensor product of lower-dimensional rules elsewhere. The R
     twin of the Julia package Quadriceps.jl.
-License: file LICENSE
+License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 3.5.0)
 Roxygen: list(markdown = TRUE)

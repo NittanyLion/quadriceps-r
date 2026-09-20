@@ -71,5 +71,7 @@ fails on any WARNING). The logo is `man/figures/logo.svg`, a copy of the one in 
 GitHub Actions (`.github/workflows/R-CMD-check.yml`) runs the tests on every push to `main` and on pull
 requests; the unattended data updates trigger it too. Check `gh run list` after pushing.
 
-Private, `github.com/NittanyLion/quadriceps-r`, branch `main`. No license has been chosen yet
-(`LICENSE` says so); do not choose one without the author.
+Private, `github.com/NittanyLion/quadriceps-r`, branch `main`. MIT license (author's choice
+2026-09-19): `License: MIT + file LICENSE` in `DESCRIPTION`, `LICENSE` is CRAN's two-line stub and
+`LICENSE.md` (not built into the package) has the full text; `NOTICE.md` carries the notices of
+the rules that descend from published ones.
