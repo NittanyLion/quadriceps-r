@@ -92,9 +92,11 @@ expect(grepl("pragmatic = TRUE", msg, fixed = TRUE), "the error points to pragma
 # --- pragmatic fallback
 expect(identical(ghpos(4, 5, pragmatic = TRUE), ghpos(4, 5)), "stored GH cell unchanged")
 expect(identical(lepos(2, 11, pragmatic = TRUE), lepos(2, 11)), "stored Le cell unchanged")
-x <- available_rules("gh"); q <- max(x$q[x$d == 3]) + 1
-u <- ghpos(3, q, pragmatic = TRUE)
-expect(nrow(u$nodes) == nnodes("gh", 3, q, pragmatic = TRUE) && nrow(u$nodes) < q^3, "fallback beyond the degrees: size")
+# d = 4: the split 2 + 2 into stored d = 2 rules beats the grid (at d = 3 the fallback is the bare grid,
+# since the stored d = 2 rules end at the same degree as the d = 3 ones)
+x <- available_rules("gh"); q <- max(x$q[x$d == 4]) + 1
+u <- ghpos(4, q, pragmatic = TRUE)
+expect(nrow(u$nodes) == nnodes("gh", 4, q, pragmatic = TRUE) && nrow(u$nodes) < q^4, "fallback beyond the degrees: size")
 expect(all(u$weights > 0) && near(sum(u$weights), 1) && exactness_error(u, p = 2 * q - 1, family = "gh") < GATE,
        "fallback beyond the degrees: valid")
 for (fam in names(F)) for (dq in list(c(6, 4), c(7, 3), c(8, 2))) {
