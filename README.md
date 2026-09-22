@@ -117,13 +117,14 @@ packages share byte for byte.
 
 ## Accuracy
 
-Rules are stored in double precision. Every stored rule was checked when the data were built:
-all weights positive, and the largest relative monomial error over all monomials of degree
-`<= p` below `1e-11`. Most rules sit at `1e-16` to `1e-15`; the largest GH rules at `d = 2, 3`
-are the least accurate, at `1e-12` to `1e-11`. The measured value of each rule is in the catalog
-(`relerr`) and in [`RULES.md`](RULES.md), and the tests repeat the check for every rule. All
-nodes of the Le rules lie strictly inside the cube. One-dimensional Gauss rules are computed by
-the Golub–Welsch eigenvalue method in base R.
+Rules are stored in double precision, each the rounding of an 80-digit rule, so what remains of
+its error is rounding: the largest relative monomial error over all monomials of degree `<= p`
+is below `5.2e-15` for every GH rule (most are `1e-16` to `1e-15`; the worst is `d = 5`,
+`p = 21`) and below `4.5e-16` for every Le rule. All weights are positive, and all nodes of the
+Le rules lie strictly inside the cube. The gate applied when the data were built, and again by
+the tests on every rule, is `1e-11`. The measured value of each rule is in the catalog (`relerr`)
+and in [`RULES.md`](RULES.md). One-dimensional Gauss rules are computed by the Golub–Welsch
+eigenvalue method in base R.
 
 ## Whose rules these are
 
