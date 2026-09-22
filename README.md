@@ -5,9 +5,9 @@
 [![CI](https://github.com/NittanyLion/quadriceps-r/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/NittanyLion/quadriceps-r/actions/workflows/R-CMD-check.yml)
 ![authored by: JP](authored_by.svg)
 
-> **Paper:** Joris Pinkse, *Positive weight Hermite and Legendre quadrature rules* — arXiv: **[ARXIV-LINK-TBA](https://arxiv.org/abs/ARXIV-LINK-TBA)** (link to be filled in on publication)
+> **Paper:** Joris Pinkse, *Positive weight Hermite and Legendre quadrature rules* (2026) — Zenodo, DOI: **[10.5281/zenodo.22904159](https://doi.org/10.5281/zenodo.22904159)**
 >
-> **Data deposit:** Zenodo — DOI: **[10.5281/zenodo.22881864](https://doi.org/10.5281/zenodo.22881864)** (reserved; the link resolves once the record is published)
+> **Data deposit:** Zenodo — DOI: **[10.5281/zenodo.22881864](https://doi.org/10.5281/zenodo.22881864)**
 
 Positive-weight cubature rules in several dimensions, for two weights:
 
