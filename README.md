@@ -5,7 +5,7 @@
 [![CI](https://github.com/NittanyLion/quadriceps-r/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/NittanyLion/quadriceps-r/actions/workflows/R-CMD-check.yml)
 ![authored by: JP](authored_by.svg)
 
-> **Paper:** Joris Pinkse, *Positive weight Hermite and Legendre quadrature rules* (2026) — Zenodo, DOI: **[10.5281/zenodo.22904159](https://doi.org/10.5281/zenodo.22904159)**
+> **Paper:** Joris Pinkse, *Positive weight Hermite and Legendre quadrature rules* (2026) — **[arXiv:2609.26840](https://arxiv.org/abs/2609.26840)**; Zenodo, DOI: **[10.5281/zenodo.22904159](https://doi.org/10.5281/zenodo.22904159)**
 >
 > **Data deposit:** Zenodo — DOI: **[10.5281/zenodo.22881864](https://doi.org/10.5281/zenodo.22881864)**
 
