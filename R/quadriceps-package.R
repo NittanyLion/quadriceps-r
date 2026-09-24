@@ -8,7 +8,7 @@
 #'
 #' A rule of degree `p` integrates every polynomial of total degree `<= p` exactly. All
 #' weights are strictly positive. The rules shipped with the package are the smallest ones
-#' known to its author; [available_rules()] lists them, and the files `RULES.md` and
+#' known to its author; [available_rules()] lists them, and `LICENSE.note` and the files `RULES.md` and
 #' `NOTICE.md` of the repository say where each one comes from.
 #'
 #' The second argument `q` of [ghpos()] and [lepos()] is the number of nodes of the

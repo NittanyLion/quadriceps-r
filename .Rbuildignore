@@ -7,3 +7,5 @@
 ^\.github$
 ^authored_by\.svg$
 ^LICENSE\.md$
+^cran-comments\.md$
+^CRAN-SUBMISSION$

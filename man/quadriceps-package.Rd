@@ -17,7 +17,7 @@ Positive-weight cubature rules in \code{d >= 1} dimensions for two weight functi
 
 A rule of degree \code{p} integrates every polynomial of total degree \verb{<= p} exactly. All
 weights are strictly positive. The rules shipped with the package are the smallest ones
-known to its author; \code{\link[=available_rules]{available_rules()}} lists them, and the files \code{RULES.md} and
+known to its author; \code{\link[=available_rules]{available_rules()}} lists them, and \code{LICENSE.note} and the files \code{RULES.md} and
 \code{NOTICE.md} of the repository say where each one comes from.
 
 The second argument \code{q} of \code{\link[=ghpos]{ghpos()}} and \code{\link[=lepos]{lepos()}} is the number of nodes of the
@@ -38,11 +38,22 @@ r <- lepos(2, 5)        # degree 9 on the unit square: 17 nodes instead of 25
 Useful links:
 \itemize{
   \item \url{https://github.com/NittanyLion/quadriceps-r}
+  \item Report bugs at \url{https://github.com/NittanyLion/quadriceps-r/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Joris Pinkse \email{pinkse@gmail.com}
+\strong{Maintainer}: Joris Pinkse \email{pinkse@gmail.com} [copyright holder]
+
+Authors:
+\itemize{
+  \item Joris Pinkse \email{pinkse@gmail.com} [copyright holder]
+}
+
+Other contributors:
+\itemize{
+  \item Moustapha Diallo (some of the stored rules for the cube descend from his published rules (MIT license, see LICENSE.note)) [copyright holder]
+}
 
 }
 \keyword{internal}

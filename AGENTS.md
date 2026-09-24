@@ -70,7 +70,13 @@ fails on any WARNING). The logo is `man/figures/logo.svg`, a copy of the one in 
 GitHub Actions (`.github/workflows/R-CMD-check.yml`) runs the tests on every push to `main` and on pull
 requests; the unattended data updates trigger it too. Check `gh run list` after pushing.
 
-Private, `github.com/NittanyLion/quadriceps-r`, branch `main`. MIT license (author's choice
+Public, `github.com/NittanyLion/quadriceps-r`, branch `main`. MIT license (author's choice
 2026-09-19): `License: MIT + file LICENSE` in `DESCRIPTION`, `LICENSE` is CRAN's two-line stub and
 `LICENSE.md` (not built into the package) has the full text; `NOTICE.md` carries the notices of
-the rules that descend from published ones.
+the rules that descend from published ones. `LICENSE.note` is the CRAN-facing digest of `NOTICE.md`
+(NOTICE.md itself is not built into the package): when the credits in `NOTICE.md` change, update
+`LICENSE.note` and the `cph` entries of `Authors@R` by hand to match.
+
+CRAN: `cran-comments.md` holds the submission notes. To release, bump `Version`, run the check,
+`R CMD build .`, and submit the tarball at https://cran.r-project.org/submit.html; the maintainer
+then confirms by the emailed link.
