@@ -9,7 +9,7 @@ Description: Positive-weight cubature rules in several dimensions for the
     Gaussian weight (ghpos) and the uniform weight on the cube (lepos): the
     smallest rules known to the author for dimensions 2 to 5, with a fallback
     to the cheapest tensor product of lower-dimensional rules elsewhere. The
-    rules are described in Pinkse (2026) <arXiv:2609.26840>,
+    rules are described in Pinkse (2026) <doi:10.48550/arXiv.2609.26840>,
     <doi:10.5281/zenodo.22904159>. The R
     twin of the 'Julia' package 'Quadriceps.jl'.
 License: MIT + file LICENSE
