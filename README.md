@@ -129,8 +129,8 @@ eigenvalue method in base R.
 ## Whose rules these are
 
 <!-- BEGIN GENERATED credits -->
-116 of the 142 rules were computed from scratch by the author. A further 11 (Legendre) rules were
-obtained by node elimination started from Diallo and Worku's published rules. Finally, 15 are
+115 of the 142 rules were computed from scratch by the author. A further 11 (Legendre) rules were
+obtained by node elimination started from Diallo and Worku's published rules. Finally, 16 are
 rules from the literature (copied in, or found again by the author's search and recognized).
 <!-- END GENERATED credits -->
 `ruleinfo()` and the `origin`
